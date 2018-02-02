@@ -28,7 +28,7 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 gem 'jquery-rails'
 # PAPERCLIP IMAGES
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.1"
 # POSTS EDITOR
 gem "ckeditor"
 # TRUNCATE HTML
