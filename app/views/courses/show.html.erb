@@ -1,19 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
+      <h1>
+        <%= @course.title %>
+      </h1>
 
-<p>
-  <strong>About:</strong>
-  <%= @course.about %>
-</p>
+      <p>
+        <%= @course.about %>
+      </p>
 
-<p>
-  <strong>Admin:</strong>
-  <%= @course.admin %>
-</p>
+      <p>
+        <strong>Por <%= @course.admin.email %> </strong>
+      </p>
+      <br>
+      <h3>Índice:</h3>
+      <ul>
+        <% @course.chapters.each do |chapter| %>
+        <li><%= chapter.number %>. <%= chapter.title %></li>
+        <% end %>
+      </ul>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+      <%= link_to 'Edit', edit_course_path(@course) %> |
+      <%= link_to 'Back', courses_path %>
+    </div>
+  </div>
+</div>
